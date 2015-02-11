@@ -1,0 +1,438 @@
+div{
+	height: 100%;
+}
+
+body { 
+	/*background-color:  rgb(255, 252, 237);*/
+	background-color:  white;
+	min-width: 1000px;
+	min-height: 100%;
+}
+
+html {
+	position: relative;
+	height: 100%;
+}
+
+
+.noscroll{
+	position: relative;
+	overflow: hidden;
+}
+
+.navbar{
+	margin-bottom: 1px;
+	padding: 0px;
+	background-color: black;
+	z-index: 3001;
+	border: 0px;
+	border-radius: 0px;
+}
+
+
+.navbar-default .navbar-nav > li > a {
+	color: dimgrey;
+	background-color: rgb(200, 200, 200);;
+}
+
+.navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > li.active > a:focus {
+	color: grey;
+	background-color: white;
+}
+
+.navbar-default .navbar-nav > li.active > a:hover, .navbar-default .navbar-nav > li > a:hover {
+	color: dimgrey;
+	background-color: rgb(219, 219, 219);
+}
+
+.hidden-nav{
+	opacity: 0;
+	visibility: hidden;
+}
+
+.min{
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: all 1000ms ease;
+	-moz-transition: all 1000ms ease;
+	-o-transition:  all 1000ms ease;
+	transition: all 1000ms ease;
+}
+
+.piilossa {
+	top: -200px;
+}
+
+
+
+.container-fluid{
+	padding: 0px;
+}
+
+.jumbotron{
+	height: 300px;
+	background-color: rgb(14, 206, 206);
+	margin-bottom: 0px;
+	padding: 0px;
+
+	position: relative;
+	width: 100%;
+	z-index: 3000;
+
+}
+
+.keskipalsta{
+
+	padding: 0px;
+	background-color: rgba(239, 239, 239, 0.57);
+	padding-bottom: 0px;
+
+	min-height: calc(100vh - 351px);
+
+}
+
+.sivupalsta{
+	padding: 0px;
+	background-color: transparent;
+	height: 100%;
+}
+
+.container{
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.wrapper{
+	min-height: 100vh;
+	position:relative;
+	background-image: url("puu.png");
+	background-repeat: no-repeat;
+	background-position: right bottom 100px;
+	background-size: 40%;
+}
+.alapalkki{
+	background-color: black;
+	height: 100px;
+	width:100%;
+	position:absolute;
+	bottom: 0px;
+}
+
+.sivukuva{
+	opacity: 0.8;
+	position: relative;
+	padding-top: 200px;
+	width: 90%;
+}
+
+.sivuvalikko{
+	position: absolute;
+	top: 0%;
+	right: 0%;
+}
+
+.kokosivu{
+	position: relative;
+	height: 100%;
+}
+
+.sivuvalikko > .active > a {
+	background-color: rgb(251, 232, 149) !important;
+}
+
+.sivuvalikko > li > a {
+	background-color: rgb(239, 239, 202) !important;
+	color: grey;
+	padding: 10px 30px;
+	border-radius: 10px 0px 0px 10px;
+}
+
+.accordion-container .panel-heading {
+	padding: 0px;
+}
+
+
+.accordion-container .panel {
+	background-color:  transparent;
+	border-color: transparent;
+	box-shadow: 0px 0px 0px;
+	-webkit-box-shadow: 0px 0px 0px;
+}
+
+.accordion-container .panel-body {
+	border-color: transparent;
+}
+
+.kuva_div { 
+	height: 300px;
+	width: 1000px;
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	margin: auto;
+}
+
+.karttatausta{
+	position: absolute;
+	left: 0%;
+}
+
+.karttakuva { 
+	position: absolute;
+	top: 0%;
+	right: 0%;
+}
+
+.hongkong { 
+	position: absolute; 
+	top: 53%; 
+	left: 76.5%; 
+}
+
+.kualalumpur { 
+	position: absolute; 
+	top: 74%; 
+	left: 72.5%; 
+}
+
+.singapore { 
+	position: absolute; 
+	top: 76.7%; 
+	left: 75.2%; 
+}
+
+.vietnam { 
+	position: absolute; 
+	top: 59.5%; 
+	left: 74%; 
+}
+
+.bali{
+	position: absolute; 
+	top: 88%; 
+	left: 78.4%; 
+}
+
+.taiwan{
+	position: absolute; 
+	top: 53%; 
+	left: 80%; 
+}
+
+.thaimaa{
+	position: absolute; 
+	top: 70%; 
+	left: 74.2%; 
+}
+
+.btn-kohde {
+	width: 30px;
+	height: 30px;
+	padding: 0px;
+}
+
+.popover{
+	background-color: rgb(250, 244, 233);	
+	border: 1px solid rgba(0, 0, 0, 0);
+	height: 40px !important;
+}
+.arrow:after{
+	border-top-color: rgb(250, 244, 233) !important;
+}
+
+.row{
+	margin: 0px;
+	height: 100%;
+}
+
+.kuvarivi{
+	margin: 0.2%;
+}
+
+.kuva{
+	float: left;
+	display: block;
+	margin-right: 0.2%;
+	cursor: pointer;
+}
+
+
+/*MODAALI*/
+
+.ng-modal-overlay {
+	position:fixed;
+	z-index:9999;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#000000;
+	opacity: 0.8;
+}
+.ng-modal-dialog {
+
+	z-index:10000;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%,-50%);
+
+	background-color: black;
+	box-shadow: 4px 4px 80px #000;
+	padding: 20px;
+}
+.ng-modal-dialog-content {
+	padding: 0px;
+	text-align: left;
+}
+.ng-modal-close {
+	background-color: black;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	padding: 5px;
+	cursor: pointer;
+	font-size: 20px;
+	display: inline-block;
+	font-weight: bold;
+	font-family: 'arial', 'sans-serif';
+	color: rgb(96, 96, 96);
+}
+
+.kuva_modal{
+	position: relative;
+}
+
+.kuvausteksti{
+	text-align: justify;
+	padding-left: 70px;
+	padding-right: 70px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	font: 18px arial, sans-serif;
+	color: black !important;
+}
+
+.otsikko{
+	padding-left: 70px;
+}
+
+.reunus{
+	padding: 0px;
+}
+
+.kuvateksti{
+	text-align: center;
+	font: 16px arial, sans-serif;
+	color: rgb(167, 167, 167) !important;
+
+}
+
+
+#ylanavi{
+	position: absolute;
+	top: -50px;
+	left: 0px;
+}
+
+.latausmodaali{
+	background-color: white;
+}
+
+.nuoli{
+	z-index: 300;
+}
+
+.modaalikuvat{
+	z-index: 20;
+	position: relative;
+	outline: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%,-50%);
+
+	/* For general browser */
+	max-width: 100%;
+	max-height: 95%;
+
+	/* For Firefox browser */
+	-moz-width: 100%;
+	-moz-height:95%;
+
+	/* For Chrome and Safari browser */
+	-webkit-width: 100%;
+	-webkit-height:95%;
+
+	/* For Opera browser */
+	-o-width: 100%;
+	-o-height:95%;
+
+	width:auto;
+
+
+}
+
+
+.kuvasailio{
+	height:100%; 
+	position: relative; 
+	top: 50%; 
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+}
+
+.piilota{
+	visibility: hidden;
+}
+
+.lataus.naytalataus{
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition:  opacity 1s;
+	-ms-transition: opacity 1s;
+	transition: opacity 1s;
+	opacity: 1;
+	visibility: visible;
+}
+
+.lataus{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%,-50%);
+	z-index: 10;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.keskialapalkki{
+	padding: 20px;
+}
+.alapalkkiteksti{
+	font: 14px arial, sans-serif;
+	color: rgb(93, 93, 93) !important;
+}
+
+.uiview{
+	padding-bottom: 100px;
+	min-height: 100%;
+}
+
+
+

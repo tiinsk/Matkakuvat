@@ -1,0 +1,36 @@
+<div class="row paaalue">
+  <div class="col-xs-3 sivupalsta">
+    
+    <div align="center">    
+      <img class="sivukuva" src="src/assets/turtledragon.png">
+    </div>
+
+    <ul class="nav nav-pills nav-stacked sivuvalikko">
+      <li ui-sref-active="active"><a ui-sref="kohde.yleista">Yleistä</a></li>
+
+      <li ui-sref-active="active" ng-repeat="(key, value) in nykyinen.ryhmat">
+        <a ui-sref="kohde.kuvat({nimi: key})">{{key}}</a>
+      </li>
+    </ul> 
+
+  </div>
+
+  <div class="col-xs-7 keskipalsta">
+   
+
+   <div class="row">
+     <h1 class="otsikko">{{nykyinen.heading}}</h1>
+
+     <ui-view />
+
+   </div>
+ </div>
+
+
+ <div class="col-xs-2 sivupalsta">
+ 	
+
+ </div>
+</div>
+
+

@@ -1,0 +1,35 @@
+  <div ng-repeat="img in nykyinen.imgs">
+    <span ng-if="$index % 4 == 0">
+      <div class="row kuvarivi" align="center">
+        <img class="kuva" ng-src="{{nykyinen.imgs[$index+0].thumb}} " width= {{nykyinen.imgs[$index+0].prosentti}}% style="width: {{nykyinen.imgs[$index+0].prosentti}}%;" ng-click="open($index+0)">
+        <img class="kuva" ng-src="{{nykyinen.imgs[$index+1].thumb}}" width= {{nykyinen.imgs[$index+1].prosentti}}% style="width: {{nykyinen.imgs[$index+1].prosentti}}%;" ng-click="open($index+1)">
+        <img class="kuva" ng-src="{{nykyinen.imgs[$index+2].thumb}}" width= {{nykyinen.imgs[$index+2].prosentti}}% style="width: {{nykyinen.imgs[$index+2].prosentti}}%;" ng-click="open($index+2)">
+        <img class="kuva" ng-src="{{nykyinen.imgs[$index+3].thumb}}" width= {{nykyinen.imgs[$index+3].prosentti}}% style="width: {{nykyinen.imgs[$index+3].prosentti}}%;" ng-click="open($index+3)">
+
+      </div>
+    </span>
+  </div>
+
+
+
+  <modal-dialog show='modalShown' height="90%" width="90%">
+  <div class="modaalikuvat" style="height:100%" >
+    <div class="conatainer-fluid" style="height:100%">
+      <div class="row" style="height:100%;">
+        <div class="col-xs-1" style="height:100%"> 
+          <img ng-click='previmg()' src="src/assets/reuna_left.png" style="max-width: 100%; height:100%; cursor: pointer; " > 
+        </div>
+        <div class="col-xs-10 kuvasailio" style="height:100%"> 
+          <img ng-src="src/assets/lataus.gif" ng-class="{naytalataus: showGif}" class="lataus">
+          <img img-preload show-gif="showGif" class="modaalikuvat" ng-src="{{nykyinen.imgs[valittuKuva].img}}" style =""> 
+        </div>
+        <div class="col-xs-1" style="height:100%">
+          <img ng-click='nextimg()' src="src/assets/reuna_right.png" style="max-width: 100%; height:100%; cursor: pointer; "> 
+        </div>
+      </div>
+      <div class="kuvateksti">
+        {{nykyinen.imgs[valittuKuva].kommentti}}
+      </div>
+    </div>
+  </div>
+</modal-dialog>
