@@ -1,8 +1,10 @@
 
-angular.module('uiRouterSample', [
+angular.module('Matkakuvia', [
+    'ngResource',
     'ui.router', 
     'ui.bootstrap',
-    'kohde'
+    'kohde',
+    'kohde.services'
 ])
 .run(
   [        '$rootScope', '$state', '$stateParams', '$location', '$anchorScroll',
@@ -14,7 +16,7 @@ angular.module('uiRouterSample', [
         $rootScope.noscroll = false;
       }]);
 
-angular.module('uiRouterSample')
+angular.module('Matkakuvia')
 .config(
     [          '$stateProvider', '$urlRouterProvider',
     function ($stateProvider,   $urlRouterProvider) {
@@ -57,15 +59,33 @@ angular.module('uiRouterSample')
 })
 .controller('appCtrl', ['$scope', '$rootScope', '$location', '$anchorScroll', function($scope, $rootScope, $location, $anchorScroll){
 
-  $scope.latausModaali = false;
+  $scope.loadModal = false;
 
-  $scope.openLataus = function () {
+  $scope.openloading = function () {
         $rootScope.noscroll = true;
-        $scope.latausModaali = !$scope.latausModaali;
+        $scope.loadModal = !$scope.loadModal;
   };
 
 
 }])
 .controller('homeCtrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll){
+    
+    $scope.hover = {
+        hongkong: false,
+        taiwan: false,
+        vietnam: false,
+        kualalumpur: false,
+        thaimaa: false,
+        singapore: false,
+        bali: false
+    };
+
+    $scope.hoverText = function(place){
+        $scope.hover[place] = true;
+    };
+
+    $scope.unHoverText = function(place){
+        $scope.hover[place] = false;
+    };
 
 }]);

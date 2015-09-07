@@ -1,36 +1,57 @@
-<div class="row paaalue">
-  <div class="col-xs-3 sivupalsta">
-    
-    <div align="center">    
-      <img class="sivukuva" src="src/assets/turtledragon.png">
+
+<div class="position-absolute navbar-margin-top">
+  <div class="row">
+    <div class="col-md-8 col-xs-offset-2 middle-section">
+      <div class="row">
+       <h1 class="place-title">{{currentImg.heading}}</h1>
+       <ui-view />
+      </div>
+
+        <div class="thumb-holder">
+        
+          <div class="group-thumb" ng-repeat="group in currentImg.tabs"  ng-mouseover="group.hover = true;" ng-mouseleave="group.hover = false;" ng-click="toggleShowPhotos($index); ">
+            <div class="thumb-img" ng-class="{'hover-over-img': group.hover || currentImageTab == $index }" ng-style="group.thumbnailcss"></div>
+            <div class="hover-textbox hover-box-{{group.color}}" ng-class="{'hover-over': group.hover || currentImageTab == $index}">{{group.name}}</div>
+          </div>
+
+
+        </div>
+        <div class="img-borderline border-{{currentImg.tabs[currentImageTab].color}}" ng-if="currentImageTab != undefined">
+          <div ng-repeat="img in currentImg.tabs[currentImageTab].imgs track by $index" ng-init="i = $index">
+            <span ng-if="i % numOfColumns().length == 0">
+                  <div class="preview-row" ng-class="{'preview-row-last': currentImg.tabs[currentImageTab].imgs.length-i < numOfColumns().length }" >
+                    <span ng-repeat="img in numOfColumns() track by $index" class="preview-img" style="width: {{currentImg.tabs[currentImageTab].imgs[$index+i].percentageWidth}}%;" ng-click="open([$index+i])">
+                      <img ng-src="{{currentImg.tabs[currentImageTab].imgs[$index+i].thumb}} " width="100%" height="100%" style="width: 100%">
+                    </span>
+                  </div>
+            </span>
+          </div>
+        </div>
     </div>
-
-    <ul class="nav nav-pills nav-stacked sivuvalikko">
-      <li ui-sref-active="active"><a ui-sref="kohde.yleista">Yleistä</a></li>
-
-      <li ui-sref-active="active" ng-repeat="(key, value) in nykyinen.ryhmat">
-        <a ui-sref="kohde.kuvat({nimi: key})">{{key}}</a>
-      </li>
-    </ul> 
 
   </div>
 
-  <div class="col-xs-7 keskipalsta">
-   
-
-   <div class="row">
-     <h1 class="otsikko">{{nykyinen.heading}}</h1>
-
-     <ui-view />
-
-   </div>
- </div>
-
-
- <div class="col-xs-2 sivupalsta">
- 	
-
- </div>
 </div>
 
+<modal-dialog show='modalShown' height="90%" width="90%">
+  <div class="modal-images" style="height:100%" >
+    <div class="conatainer-fluid" style="height:100%">
+      <div class="row" style="height:100%;">
+        <div class="col-xs-1" style="height:100%"> 
+          <img ng-click='previmg()' src="src/assets/reuna_left.png" style="max-width: 100%; height:100%; cursor: pointer; " > 
+        </div>
+        <div class="col-xs-10 image-holder" style="height:100%"> 
+          <img ng-src="src/assets/lataus.gif" ng-class="{'show-loading': showGif}" class="loading">
+          <img img-preload show-gif="showGif" class="modal-images" ng-src="{{currentImg.tabs[currentImageTab].imgs[selectedImg].img}}" style =""> 
+        </div>
+        <div class="col-xs-1" style="height:100%">
+          <img ng-click='nextimg()' src="src/assets/reuna_right.png" style="max-width: 100%; height:100%; cursor: pointer; "> 
+        </div>
+      </div>
+      <div class="image-text">
+        {{currentImg.tabs[currentImageTab].imgs[selectedImg].kommentti}}
+      </div>
+    </div>
+  </div>
+</modal-dialog>
 

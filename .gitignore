@@ -1,3 +1,4 @@
+flickrauth.js
 *.sublime-*
 node_modules/*
 public/vendor/*

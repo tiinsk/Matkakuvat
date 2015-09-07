@@ -2,11 +2,12 @@ div{
 	height: 100%;
 }
 
-body { 
-	/*background-color:  rgb(255, 252, 237);*/
+body {
 	background-color:  white;
-	min-width: 1000px;
 	min-height: 100%;
+	font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 html {
@@ -15,246 +16,38 @@ html {
 }
 
 
-.noscroll{
-	position: relative;
-	overflow: hidden;
-}
-
-.navbar{
-	margin-bottom: 1px;
-	padding: 0px;
-	background-color: black;
-	z-index: 3001;
-	border: 0px;
-	border-radius: 0px;
-}
-
-
-.navbar-default .navbar-nav > li > a {
-	color: dimgrey;
-	background-color: rgb(200, 200, 200);;
-}
-
-.navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > li.active > a:focus {
-	color: grey;
-	background-color: white;
-}
-
-.navbar-default .navbar-nav > li.active > a:hover, .navbar-default .navbar-nav > li > a:hover {
-	color: dimgrey;
-	background-color: rgb(219, 219, 219);
-}
-
-.hidden-nav{
-	opacity: 0;
-	visibility: hidden;
-}
-
-.min{
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: all 1000ms ease;
-	-moz-transition: all 1000ms ease;
-	-o-transition:  all 1000ms ease;
-	transition: all 1000ms ease;
-}
-
-.piilossa {
-	top: -200px;
-}
-
-
-
-.container-fluid{
-	padding: 0px;
-}
-
-.jumbotron{
-	height: 300px;
-	background-color: rgb(14, 206, 206);
-	margin-bottom: 0px;
-	padding: 0px;
-
-	position: relative;
-	width: 100%;
-	z-index: 3000;
-
-}
-
-.keskipalsta{
-
-	padding: 0px;
-	background-color: rgba(239, 239, 239, 0.57);
-	padding-bottom: 0px;
-
-	min-height: calc(100vh - 351px);
-
-}
-
-.sivupalsta{
-	padding: 0px;
-	background-color: transparent;
-	height: 100%;
-}
-
-.container{
-	width: 100%;
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
-.wrapper{
-	min-height: 100vh;
-	position:relative;
-	background-image: url("puu.png");
-	background-repeat: no-repeat;
-	background-position: right bottom 100px;
-	background-size: 40%;
-}
-.alapalkki{
-	background-color: black;
-	height: 100px;
-	width:100%;
-	position:absolute;
-	bottom: 0px;
-}
-
-.sivukuva{
-	opacity: 0.8;
-	position: relative;
-	padding-top: 200px;
-	width: 90%;
-}
-
-.sivuvalikko{
-	position: absolute;
-	top: 0%;
-	right: 0%;
-}
-
-.kokosivu{
-	position: relative;
-	height: 100%;
-}
-
-.sivuvalikko > .active > a {
-	background-color: rgb(251, 232, 149) !important;
-}
-
-.sivuvalikko > li > a {
-	background-color: rgb(239, 239, 202) !important;
-	color: grey;
-	padding: 10px 30px;
-	border-radius: 10px 0px 0px 10px;
-}
-
-.accordion-container .panel-heading {
-	padding: 0px;
-}
-
-
-.accordion-container .panel {
-	background-color:  transparent;
-	border-color: transparent;
-	box-shadow: 0px 0px 0px;
-	-webkit-box-shadow: 0px 0px 0px;
-}
-
-.accordion-container .panel-body {
-	border-color: transparent;
-}
-
-.kuva_div { 
-	height: 300px;
-	width: 1000px;
-	position: relative;
-	padding: 0px;
-	margin: 0px;
-	margin: auto;
-}
-
-.karttatausta{
-	position: absolute;
-	left: 0%;
-}
-
-.karttakuva { 
-	position: absolute;
-	top: 0%;
-	right: 0%;
-}
-
-.hongkong { 
-	position: absolute; 
-	top: 53%; 
-	left: 76.5%; 
-}
-
-.kualalumpur { 
-	position: absolute; 
-	top: 74%; 
-	left: 72.5%; 
-}
-
-.singapore { 
-	position: absolute; 
-	top: 76.7%; 
-	left: 75.2%; 
-}
-
-.vietnam { 
-	position: absolute; 
-	top: 59.5%; 
-	left: 74%; 
-}
-
-.bali{
-	position: absolute; 
-	top: 88%; 
-	left: 78.4%; 
-}
-
-.taiwan{
-	position: absolute; 
-	top: 53%; 
-	left: 80%; 
-}
-
-.thaimaa{
-	position: absolute; 
-	top: 70%; 
-	left: 74.2%; 
-}
-
-.btn-kohde {
-	width: 30px;
-	height: 30px;
-	padding: 0px;
-}
-
-.popover{
-	background-color: rgb(250, 244, 233);	
-	border: 1px solid rgba(0, 0, 0, 0);
-	height: 40px !important;
-}
-.arrow:after{
-	border-top-color: rgb(250, 244, 233) !important;
+h1{
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 .row{
-	margin: 0px;
-	height: 100%;
+	margin: 0px; /*sivuttaispalkki ilmestyy ilman margin nollaa!!!*/
 }
 
-.kuvarivi{
-	margin: 0.2%;
+.uiview{
+	position: absolute;
+	top: 0px;
+    width: 100%;
+    height: inherit;
 }
 
-.kuva{
+.ui-wrapper{
+	position: relative;
+}
+
+.position-absolute{
+	position: absolute;
+	top: 0px;
+	height: inherit;
+}
+
+
+.float-right{
+	float: right;
+}
+.float-left{
 	float: left;
-	display: block;
-	margin-right: 0.2%;
-	cursor: pointer;
 }
 
 
@@ -304,51 +97,22 @@ html {
 	color: rgb(96, 96, 96);
 }
 
-.kuva_modal{
-	position: relative;
-}
-
-.kuvausteksti{
-	text-align: justify;
-	padding-left: 70px;
-	padding-right: 70px;
-	padding-bottom: 20px;
-	padding-top: 20px;
-	font: 18px arial, sans-serif;
-	color: black !important;
-}
-
-.otsikko{
-	padding-left: 70px;
-}
-
-.reunus{
+.modal-border{
 	padding: 0px;
 }
 
-.kuvateksti{
+.image-text{
 	text-align: center;
 	font: 16px arial, sans-serif;
 	color: rgb(167, 167, 167) !important;
 
 }
 
-
-#ylanavi{
-	position: absolute;
-	top: -50px;
-	left: 0px;
-}
-
-.latausmodaali{
+.load-modal{
 	background-color: white;
 }
 
-.nuoli{
-	z-index: 300;
-}
-
-.modaalikuvat{
+.modal-images{
 	z-index: 20;
 	position: relative;
 	outline: 0;
@@ -382,7 +146,7 @@ html {
 }
 
 
-.kuvasailio{
+.image-holder{
 	height:100%; 
 	position: relative; 
 	top: 50%; 
@@ -393,11 +157,11 @@ html {
 	-o-transform: translateY(-50%);
 }
 
-.piilota{
+.hide-this{
 	visibility: hidden;
 }
 
-.lataus.naytalataus{
+.loading.show-loading{
 	-webkit-transition: opacity 1s;
 	-moz-transition: opacity 1s;
 	-o-transition:  opacity 1s;
@@ -407,7 +171,7 @@ html {
 	visibility: visible;
 }
 
-.lataus{
+.loading{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -421,18 +185,426 @@ html {
 	opacity: 0;
 }
 
-.keskialapalkki{
+/* Map css --> */
+.st0{
+	fill: #A1EDED;
+	transform: scale(2);
+}
+.map-container{
+	position: relative;
+}
+.map-container:after{
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.map-svg{
+	display: inline-block;
+}
+
+
+.asia{
+	width: 500px;
+	height: 576px;
+	float: left;
+
+}
+
+.europe{
+	width: 307px;
+	height: 614px;
+	float: right;
+}
+
+.america{
+	width: 576px;
+	height: 730px;
+	float: left;
+	position: relative;
+    left: -120px;
+
+}
+
+.australia{
+	width: 230px;
+	height: 211px;
+	float: right;
+	position: relative;
+    top: 140px;
+}
+
+.bali-dot{
+	position: absolute;
+	left: 172px;
+    top: 463px;
+}
+
+.singapore-dot{
+	position: absolute;
+	left: 128px;
+    top: 419px;
+}
+
+.kuala-lumpur-dot{
+	position: absolute;
+	left: 118px;
+    top: 398px;
+}
+
+.thailand-dot{
+	position: absolute;
+	left: 113px;
+    top: 380px;
+}
+
+.vietnam-dot{
+	position: absolute;
+	left: 135px;
+    top: 347px;
+}
+
+.hong-kong-dot{
+	position: absolute;
+	left: 169px;
+    top: 316px;
+}
+
+.taiwan-dot{
+	position: absolute;
+	left: 190px;
+    top: 322px;
+}
+
+.dot{
+	position: relative;
+	background: #FFAA00;
+	border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    top: -12px;
+    left: 6px;
+}
+
+.gps_ring {
+	border: 3px solid #FBBB4F;
+    -webkit-border-radius: 30px;
+    height: 18px;
+    width: 18px;
+    position: relative;
+    -webkit-animation: pulsate 4s cubic-bezier(1, 0.03, 0.92, 0.52);
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.0;
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+
+/* <-- Map css ends */
+
+/* Homepage image button css STARTS */
+.navbar-margin-top{
+	margin-top: 100px;
+}
+
+.picture-row{
+	height: initial;
+}
+
+.list
+{
+	list-style-type: none;
+	padding: 0px;
+}
+
+
+.picture-box{
+	height: 400px;
+	width: 400px;
+	background: black;
+	margin: 20px;
+	margin-right: 12%;
+	margin-left: auto;
+    display: table;
+    position: relative;
+    overflow: hidden;
+}
+
+.offset1{
+	margin-left: 10%;
+	margin-top: 40%;
+}
+
+.offset2{
+	margin-bottom: 120px;
+}
+
+.offset3{
+	margin-left: 44%;
+    margin-top: 20%;
+}
+
+@media (max-width: 992px){
+	.offset1{
+		margin-left:  0px;
+		margin-top: 0px;
+	}
+	.offset2{
+		margin-bottom:  0px;
+	}
+	.offset3{
+	margin-left: 0%;
+    margin-top: 0%;
+}
+
+}
+
+
+.bali-img{
+	background: url('https://farm8.staticflickr.com/7523/15894944171_5ce10388b3_b.jpg');
+    background-size: 400px 600px;
+    background-position-x: 0%;
+    background-position-y: 35%;
+}
+
+.singapore-img{
+	background: url('https://farm4.staticflickr.com/3921/14990286688_6d4e544525_b.jpg');
+	background-size: 600px 400px;
+	background-position-x: 0%;
+}
+
+.kuala-lumpur-img{
+	background: url('https://farm4.staticflickr.com/3919/14988904288_37c6b3a54b_b.jpg');
+    background-size: 500px 750px;
+    background-position-x: 0%;
+    background-position-y: 44%;
+}
+
+.thailand-img{
+	background: url('https://farm8.staticflickr.com/7519/15545736733_ce867abe3c_b.jpg');
+	background-size: 600px 400px;
+	background-position-x: 4%;
+}
+
+.vietnam-img{
+	background: url('https://farm4.staticflickr.com/3845/15201600808_2b7e67ea37_h.jpg');
+    background-size: 1285px 964px;
+    background-position-x: 16%;
+    background-position-y: 29%;
+}
+.place-img{
+	height: 400px;
+	width: 400px;
+	position: absolute;
+	top: 0px;
+	-webkit-transition: top .4s ease-out;  
+    -moz-transition: top .4s ease-out;  
+    -o-transition: top .4s ease-out;  
+    transition: top .4s ease-out; 
+}
+
+.thumb-img{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	-webkit-transition: top .4s ease-out;  
+    -moz-transition: top .4s ease-out;  
+    -o-transition: top .4s ease-out;  
+    transition: top .4s ease-out; 
+}
+
+
+.hong-kong-img{
+	background: url('https://farm6.staticflickr.com/5583/15152274766_d94a51d89a_b.jpg');
+	background-size: 600px 400px;
+	background-position-x: 50%;
+}
+
+
+.taiwan-img{
+	background: url('https://farm8.staticflickr.com/7528/15977767690_dbc9daf4ce_b.jpg');
+	background-size: 600px 400px;
+	background-position-x: right;
+}
+
+.hover-textbox{
+    height: 20%;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+	transform: translateY(100%);
+	-webkit-transition: transform .4s ease-out;  
+    -moz-transition: transform .4s ease-out;  
+    -o-transition: transform .4s ease-out;  
+	transition: transform 0.4s ease-out;
+}
+
+.hover-box-red{
+	background: #E65050;
+}
+
+.hover-box-blue{
+	background: #79CACA;
+}
+
+.hover-box-yellow{
+	background: #E6D650;
+}
+
+.hover-over{
+	transform: translateY(0%);
+}
+
+.hover-over-img{
+	top: -10%;
+}
+
+.lanthern-img{
+	background: url("/src/assets/lyhdyt.png");
+	height: 600px;
+    width: 350px;
+    position: absolute;
+    top: -20px;
+    left: 110px;
+}
+
+
+@media (max-width: 992px){
+	.lanthern-img{
+		height: 0px;
+    	width: 0px;
+	}
+}
+
+/* Homepage image button css ENDS */
+
+/* Navbar css STARTS */
+.navbar{
+	margin-bottom: 1px;
+	padding: 0px;
+	background-color: black;
+	z-index: 3001;
+	border: 0px;
+	border-radius: 0px;
+}
+
+.navbar-brand{
+	margin-left: 10px !important;
+}
+
+.navbar-default .navbar-brand {
+	color: white !important;
+	background-color: #79CACA;
+}
+
+.navbar-default .navbar-brand.active {
+    color: white !important;
+    background-color: #E6D650;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: white !important;
+	background-color: #E65050;
+}
+
+/* Navbar css ENDS */
+
+/* Kohde.hmtl css STARTS */
+.middle-section{
+	margin-bottom: 100px;
+	padding: 0px;
+}
+
+.image-title{
 	padding: 20px;
+	position: absolute;
 }
-.alapalkkiteksti{
-	font: 14px arial, sans-serif;
-	color: rgb(93, 93, 93) !important;
-}
-
-.uiview{
-	padding-bottom: 100px;
-	min-height: 100%;
+.place-text{
+	text-align: justify;
+	width: 80%;
+	margin-bottom: 25px;
 }
 
 
+.thumb-holder{
+	white-space: nowrap;
+	overflow: hidden;
+}
 
+.group-thumb{
+	width: 33%;
+	background: black;
+	margin: 10px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+    display: inline-table;
+    position: relative;
+    overflow: hidden;
+}
+
+.group-thumb:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.preview-img{
+	display: inline-block;
+	margin-right: 0.1vw;
+	margin-left: 0.1vw;
+	cursor: pointer;
+}
+
+.preview-row{
+	position: relative;
+	margin-bottom: 0.1vw;
+	margin-top: 0.1vw;
+	text-align: center;
+}
+
+.preview-row-last{
+	text-align: left;
+}
+
+.img-borderline{
+	width: 100%;
+    border-width: 10px;
+    border-style: solid;
+ }
+
+.border-red{
+	border-color: #E65050;
+}
+
+.border-blue{
+	border-color: #79CACA;
+}
+
+.border-yellow{
+	border-color: #E6D650;
+}
+
+
+.no-margin{
+	margin-right: 0px;
+}
+
+@media (max-width: 992px){
+	.col-xs-offset-2{
+		margin-left: 10px; 
+	}
+	.col-md-8{
+		margin-right: 10px; 
+	}
+}
+
+
+
+/* Kohde.hmtl css ENDS */

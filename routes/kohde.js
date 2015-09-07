@@ -1,3 +1,4 @@
+var flickrOptions = require("./../flickrauth");
 
 module.exports = function(app, flickr){
 
@@ -6,6 +7,7 @@ module.exports = function(app, flickr){
 		flickr.photosets.getPhotos({
 			 photoset_id: req.params.id,
 			 extras: "url_c, description",
+			 user_id: flickrOptions.user_id
 		}, function(err, result) {
 				if(err) { 
 					throw new Error(err); 
@@ -24,22 +26,6 @@ module.exports = function(app, flickr){
 					data.thumb = osoite+".jpg";
 					data.img = osoite+"_b.jpg";
 					data.kommentti = entry.description._content;
-					/*flickr.photos.comments.getList({
-						photo_id: entry.id
-					},function(err, result) {
-						if(err) { 
-							throw new Error(err); 
-						}
-
-						var kommentti = "";
-						console.log(result);
-						if("comment" in result.comments){
-							console.log(result.comments.comment[0]._content);
-							kommentti = result.comments.comment[0]._content;
-						}
-						data.kommentti = kommentti;
-						
-					});*/
 
 					imgs.push(data);
 				});	

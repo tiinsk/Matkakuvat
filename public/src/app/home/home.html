@@ -1,32 +1,74 @@
-<div class="row">
-    <div class="col-xs-3 sivupalsta">
-       <div align="center">		
-          <img class="" src="src/assets/lyhdyt.png" width="50%">
+
+  <div class="col-xs-10 col-xs-offset-1 position-absolute navbar-margin-top">
+    <div class="row picture-row">
+
+      <div class="col-md-6 "> 
+        <div class="picture-box" ng-mouseover="hoverText('hongkong');" ng-mouseleave="unHoverText('hongkong');">
+          <div class="hong-kong-img place-img" ng-class="{'hover-over-img': hover.hongkong}" ui-sref="kohde.yleista({place: 'hongkong'})"></div>
+          <div class="hover-textbox hover-box-red" ng-class="{'hover-over': hover.hongkong}">Hong Kong</div>
+        </div> 
       </div>
-  </div>
 
+      <div class="col-md-6 "> 
+        <div class="picture-box offset1" ng-mouseover="hoverText('taiwan')" ng-mouseleave="unHoverText('taiwan')">
+          <div class="taiwan-img place-img" ng-class="{'hover-over-img': hover.taiwan}" ui-sref="kohde.yleista({place: 'taiwan'})"></div>
+          <div class="hover-textbox hover-box-blue" ng-class="{'hover-over': hover.taiwan}">Taiwan</div>
+        </div> 
+      </div>
 
-  <div class="col-xs-7 keskipalsta">
-    <h1 class="otsikko">Moikka!</h1>
-    <div class="kuvausteksti">
-        <p>
-            Tervetuloa katselemaan kuvia ja lukemaan vaihto-opiskelujaksostamme Singaporessa. Singaporen vaihto-jaksomme on nyt jo päättynyt ja olemme palanneet takaisin Suomeen! JEE!
-        </p>
-        <p>
-            Uusimmat kuvat löytyvät Taiwanista ja Thaimaasta. Singapore osioonkin on päivitetty viimeiset kuvat.
-        </p>
-        <p>Klikkaa karttaa katsoaksesi eri kohteiden kuvia!</p>
-        <img src="https://farm8.staticflickr.com/7467/16139265526_758258e93c_b.jpg" width="400px" style="margin:15px 20px 15px 0px;">
-
-        <p>
-            Terkuin,
-        </p>
-        <p>
-            Tiina & Aleksi
-        </p>
     </div>
 
+    <div class="row picture-row">
+
+      <div class="col-md-6 "> 
+        <div class="picture-box offset2" ng-mouseover="hoverText('vietnam')" ng-mouseleave="unHoverText('vietnam')">
+          <div class="vietnam-img place-img" ng-class="{'hover-over-img': hover.vietnam}" ui-sref="kohde.yleista({place: 'vietnam'})"></div>
+          <div class="hover-textbox hover-box-yellow" ng-class="{'hover-over': hover.vietnam}">Vitenam</div>
+        </div> 
+      </div>
+      <div class="col-md-6 "> 
+        <div class="lanthern-img"></div>
+      </div>
+
+    </div>
+
+    <div class="row picture-row">
+
+      <div class="col-md-6 "> 
+        <div class="picture-box" ng-mouseover="hoverText('thaimaa')" ng-mouseleave="unHoverText('thaimaa')">
+          <div class="thailand-img place-img" ng-class="{'hover-over-img': hover.thaimaa}" ui-sref="kohde.yleista({place: 'thaimaa'})"></div>
+          <div class="hover-textbox hover-box-blue" ng-class="{'hover-over': hover.thaimaa}">Thaimaa</div>
+        </div> 
+      </div>
+
+
+
+      <div class="col-md-6 "> 
+        <div class="picture-box offset1" ng-mouseover="hoverText('kualalumpur')" ng-mouseleave="unHoverText('kualalumpur')">
+          <div class="kuala-lumpur-img place-img" ng-class="{'hover-over-img': hover.kualalumpur}" ui-sref="kohde.yleista({place: 'kualalumpur'})"></div>
+          <div class="hover-textbox hover-box-yellow" ng-class="{'hover-over': hover.kualalumpur}">Kuala Lumpur</div>
+        </div> 
+      </div>
+
+
+
+    </div>
+
+
+    <div class="row picture-row">
+      <div class="col-md-6 "> 
+        <div class="picture-box" ng-mouseover="hoverText('singapore')" ng-mouseleave="unHoverText('singapore')">
+          <div class="singapore-img place-img" ng-class="{'hover-over-img': hover.singapore}" ui-sref="kohde.yleista({place: 'singapore'})"></div>
+          <div class="hover-textbox hover-box-red" ng-class="{'hover-over': hover.singapore}">Singapore</div>
+        </div> 
+      </div>
+
+      <div class="col-md-6 "> 
+        <div class="picture-box offset1" ng-mouseover="hoverText('bali')" ng-mouseleave="unHoverText('bali')">
+          <div class="bali-img place-img" ng-class="{'hover-over-img': hover.bali}" ui-sref="kohde.yleista({place: 'bali'})"></div>
+          <div class="hover-textbox hover-box-red" ng-class="{'hover-over': hover.bali}">Bali</div>
+        </div> 
+      </div>
+    </div>
 </div>
-<div class="col-xs-2 sivupalsta"></div>
-</div>
-</div>
+
