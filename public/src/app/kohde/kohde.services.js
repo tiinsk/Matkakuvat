@@ -180,47 +180,35 @@ angular.module('kohde.services', [])
 
 		function calculateSizes(images){
 			var wWidth = $window.innerWidth;
-			console.log(giveColumns());
+
 		    var numOfColumns = giveColumns();
 		    for (var i = 0; i < images.length; i+= numOfColumns) {
 		            if (images.length-i >= numOfColumns ) {
 
 		                var med = 0;
-
 		                for (var j = 0; j < numOfColumns; j++) {
 		                    med += images[i+j].korkeus;
 		                };
 		                med /= numOfColumns;
 		                var sumWidth = 0;
-		                //var med = (images[i].korkeus + images[i+1].korkeus + images[i+2].korkeus +images[i+3].korkeus)/4;
+
 		                for (var j = 0; j < numOfColumns; j++) {
 		                    var width = images[i+j].leveys*med/images[i+j].korkeus;
 		                    images[i+j].newWidth = width;
 		                    sumWidth += width;
-		                    images[i+j].newHeight = med;
+		                    //images[i+j].newHeight = med;
 		                };
 
-		                var scaleFactor = (wWidth * 0.65)/sumWidth;
+		                //var scaleFactor = (wWidth * 0.65)/sumWidth;
 		                var x = (98.4/(sumWidth))*1000;
 		                for (var j = 0; j < numOfColumns; j++) {
-		                    images[i+j].scaledWidth = images[i+j].newWidth*scaleFactor;
-		                    images[i+j].scaledHeight = images[i+j].newHeight*scaleFactor;
+		                    //images[i+j].scaledWidth = images[i+j].newWidth*scaleFactor;
+		                    //images[i+j].scaledHeight = images[i+j].newHeight*scaleFactor;
 		                    images[i+j].percentageWidth = Math.floor(images[i+j].newWidth*x)/1000;
 		                };
-		                /*
-		                var ul1 = images[i].leveys*med/images[i].korkeus;
-		                var ul2 = images[i+1].leveys*med/images[i+1].korkeus;
-		                var ul3 = images[i+2].leveys*med/images[i+2].korkeus;
-		                var ul4 = images[i+3].leveys*med/images[i+3].korkeus;
-		                
-		                var x = (99.2/(ul1+ul2+ul3+ul4))*1000;
-		                images[i].prosentti = Math.floor(ul1*x)/1000;
-		                images[i+1].prosentti = Math.floor(ul2*x)/1000;
-		                images[i+2].prosentti = Math.floor(ul3*x)/1000;
-		                images[i+3].prosentti = Math.floor(ul4*x)/1000;
-		                */
+
 		            } else {
-		            	console.log("not even amount");
+
 		                var med = 0;
 
 		                for (var j = 0; j < images.length-i; j++) {
@@ -228,48 +216,24 @@ angular.module('kohde.services', [])
 		                };
 		                med /= images.length-i;
 		                var sumWidth = 0;
-		                //var med = (images[i].korkeus + images[i+1].korkeus + images[i+2].korkeus +images[i+3].korkeus)/4;
+		               
 		                for (var j = 0; j < images.length-i; j++) {
 		                    var width = images[i+j].leveys*med/images[i+j].korkeus;
 		                    images[i+j].newWidth = width;
 		                    sumWidth += width;
-		                    images[i+j].newHeight = med;
+		                    //images[i+j].newHeight = med;
 		                };
 
-		                scaleFactor = (((wWidth * 0.65)/(images.length-i))*(images.length-i))/sumWidth;
+		                //scaleFactor = (((wWidth * 0.65)/(images.length-i))*(images.length-i))/sumWidth;
 						var x = ((98.4/numOfColumns)*(images.length-i)/sumWidth)*1000;
 		                for (var j = 0; j < images.length-i; j++) {
-		                    images[i+j].scaledWidth = images[i+j].newWidth*scaleFactor;
-		                    images[i+j].scaledHeight = images[i+j].newHeight*scaleFactor;
+		                    //images[i+j].scaledWidth = images[i+j].newWidth*scaleFactor;
+		                    //images[i+j].scaledHeight = images[i+j].newHeight*scaleFactor;
 		                    images[i+j].percentageWidth = Math.floor(images[i+j].newWidth*x)/1000;
 		                };
 		            }
-		            /*
-		            else if (images.length-i > 2 ) {
-		                var med = (images[i].korkeus + images[i+1].korkeus + images[i+2].korkeus)/3;
-		                var ul1 = images[i].leveys*med/images[i].korkeus;
-		                var ul2 = images[i+1].leveys*med/images[i+1].korkeus;
-		                var ul3 = images[i+2].leveys*med/images[i+2].korkeus;
-
-		                var x = (99.4/(ul1+ul2+ul3))*1000;
-		                images[i].prosentti = Math.floor(ul1*x)/1000;
-		                images[i+1].prosentti = Math.floor(ul2*x)/1000;
-		                images[i+2].prosentti = Math.floor(ul3*x)/1000;
-		            }
-		            else if (images.length-i > 1 ) {
-		                var med = (images[i].korkeus + images[i+1].korkeus)/2;
-		                var ul1 = images[i].leveys*med/images[i].korkeus;
-		                var ul2 = images[i+1].leveys*med/images[i+1].korkeus;
-
-		                var x = (99.6/(ul1+ul2))*1000;
-		                images[i].prosentti = Math.floor(ul1*x)/1000;
-		                images[i+1].prosentti = Math.floor(ul2*x)/1000;
-		            }
-		            else if (images.length-i > 0 ) {
-		                images[i].prosentti = 30;
-		            }*/
 		        }
-
+		        
 		        return images;
 		};
 

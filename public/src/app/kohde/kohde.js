@@ -20,9 +20,11 @@
             });
     }]
 )
-.controller('KohdeCtrl', ['$rootScope', '$scope', '$stateParams', '$modal', '$location', '$anchorScroll', '$document', 'KohdeData', 'SizeCalculator', '$window',
-    function($rootScope, $scope, $stateParams, $modal, $location, $anchorScroll, $document, KohdeData, SizeCalculator, $window){
+.controller('KohdeCtrl', ['$rootScope', '$scope', '$stateParams', '$modal', '$location', '$anchorScroll', '$document', 'KohdeData', 'SizeCalculator', '$window', 'touchService',
+    function($rootScope, $scope, $stateParams, $modal, $location, $anchorScroll, $document, KohdeData, SizeCalculator, $window, touchService){
     
+    $scope.isTouchDevice = touchService.isTouchDevice;
+
     (function() {
       $location.hash('ylanavi');
       $anchorScroll();

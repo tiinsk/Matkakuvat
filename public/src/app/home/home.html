@@ -4,15 +4,15 @@
 
       <div class="col-md-6 "> 
         <div class="picture-box" ng-mouseover="hoverText('hongkong');" ng-mouseleave="unHoverText('hongkong');">
-          <div class="hong-kong-img place-img" ng-class="{'hover-over-img': hover.hongkong}" ui-sref="kohde.yleista({place: 'hongkong'})"></div>
-          <div class="hover-textbox hover-box-red" ng-class="{'hover-over': hover.hongkong}">Hong Kong</div>
+          <div class="hong-kong-img place-img" ng-class="{'hover-over-img': hover.hongkong || isTouchDevice}" ui-sref="kohde.yleista({place: 'hongkong'})"></div>
+          <div class="hover-textbox hover-box-red" ng-class="{'hover-over': hover.hongkong || isTouchDevice}">Hong Kong</div>
         </div> 
       </div>
 
       <div class="col-md-6 "> 
         <div class="picture-box offset1" ng-mouseover="hoverText('taiwan')" ng-mouseleave="unHoverText('taiwan')">
-          <div class="taiwan-img place-img" ng-class="{'hover-over-img': hover.taiwan}" ui-sref="kohde.yleista({place: 'taiwan'})"></div>
-          <div class="hover-textbox hover-box-blue" ng-class="{'hover-over': hover.taiwan}">Taiwan</div>
+          <div class="taiwan-img place-img" ng-class="{'hover-over-img': hover.taiwan || isTouchDevice}" ui-sref="kohde.yleista({place: 'taiwan'})"></div>
+          <div class="hover-textbox hover-box-blue" ng-class="{'hover-over': hover.taiwan || isTouchDevice}">Taiwan</div>
         </div> 
       </div>
 
@@ -22,8 +22,8 @@
 
       <div class="col-md-6 "> 
         <div class="picture-box offset2" ng-mouseover="hoverText('vietnam')" ng-mouseleave="unHoverText('vietnam')">
-          <div class="vietnam-img place-img" ng-class="{'hover-over-img': hover.vietnam}" ui-sref="kohde.yleista({place: 'vietnam'})"></div>
-          <div class="hover-textbox hover-box-yellow" ng-class="{'hover-over': hover.vietnam}">Vitenam</div>
+          <div class="vietnam-img place-img" ng-class="{'hover-over-img': hover.vietnam || isTouchDevice}" ui-sref="kohde.yleista({place: 'vietnam'})"></div>
+          <div class="hover-textbox hover-box-yellow" ng-class="{'hover-over': hover.vietnam || isTouchDevice}">Vitenam</div>
         </div> 
       </div>
       <div class="col-md-6 "> 
@@ -36,8 +36,8 @@
 
       <div class="col-md-6 "> 
         <div class="picture-box" ng-mouseover="hoverText('thaimaa')" ng-mouseleave="unHoverText('thaimaa')">
-          <div class="thailand-img place-img" ng-class="{'hover-over-img': hover.thaimaa}" ui-sref="kohde.yleista({place: 'thaimaa'})"></div>
-          <div class="hover-textbox hover-box-blue" ng-class="{'hover-over': hover.thaimaa}">Thaimaa</div>
+          <div class="thailand-img place-img" ng-class="{'hover-over-img': hover.thaimaa || isTouchDevice}" ui-sref="kohde.yleista({place: 'thaimaa'})"></div>
+          <div class="hover-textbox hover-box-blue" ng-class="{'hover-over': hover.thaimaa || isTouchDevice}">Thaimaa</div>
         </div> 
       </div>
 
@@ -45,8 +45,8 @@
 
       <div class="col-md-6 "> 
         <div class="picture-box offset1" ng-mouseover="hoverText('kualalumpur')" ng-mouseleave="unHoverText('kualalumpur')">
-          <div class="kuala-lumpur-img place-img" ng-class="{'hover-over-img': hover.kualalumpur}" ui-sref="kohde.yleista({place: 'kualalumpur'})"></div>
-          <div class="hover-textbox hover-box-yellow" ng-class="{'hover-over': hover.kualalumpur}">Kuala Lumpur</div>
+          <div class="kuala-lumpur-img place-img" ng-class="{'hover-over-img': hover.kualalumpur || isTouchDevice}" ui-sref="kohde.yleista({place: 'kualalumpur'})"></div>
+          <div class="hover-textbox hover-box-yellow" ng-class="{'hover-over': hover.kualalumpur || isTouchDevice}">Kuala Lumpur</div>
         </div> 
       </div>
 
@@ -58,15 +58,15 @@
     <div class="row picture-row">
       <div class="col-md-6 "> 
         <div class="picture-box" ng-mouseover="hoverText('singapore')" ng-mouseleave="unHoverText('singapore')">
-          <div class="singapore-img place-img" ng-class="{'hover-over-img': hover.singapore}" ui-sref="kohde.yleista({place: 'singapore'})"></div>
-          <div class="hover-textbox hover-box-red" ng-class="{'hover-over': hover.singapore}">Singapore</div>
+          <div class="singapore-img place-img" ng-class="{'hover-over-img': hover.singapore || isTouchDevice}" ui-sref="kohde.yleista({place: 'singapore'})"></div>
+          <div class="hover-textbox hover-box-red" ng-class="{'hover-over': hover.singapore || isTouchDevice}">Singapore</div>
         </div> 
       </div>
 
       <div class="col-md-6 "> 
         <div class="picture-box offset1" ng-mouseover="hoverText('bali')" ng-mouseleave="unHoverText('bali')">
-          <div class="bali-img place-img" ng-class="{'hover-over-img': hover.bali}" ui-sref="kohde.yleista({place: 'bali'})"></div>
-          <div class="hover-textbox hover-box-red" ng-class="{'hover-over': hover.bali}">Bali</div>
+          <div class="bali-img place-img" ng-class="{'hover-over-img': hover.bali || isTouchDevice}" ui-sref="kohde.yleista({place: 'bali'})"></div>
+          <div class="hover-textbox hover-box-red" ng-class="{'hover-over': hover.bali || isTouchDevice}">Bali</div>
         </div> 
       </div>
     </div>

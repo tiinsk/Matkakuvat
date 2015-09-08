@@ -10,18 +10,18 @@
         <div class="thumb-holder">
         
           <div class="group-thumb" ng-repeat="group in currentImg.tabs"  ng-mouseover="group.hover = true;" ng-mouseleave="group.hover = false;" ng-click="toggleShowPhotos($index); ">
-            <div class="thumb-img" ng-class="{'hover-over-img': group.hover || currentImageTab == $index }" ng-style="group.thumbnailcss"></div>
-            <div class="hover-textbox hover-box-{{group.color}}" ng-class="{'hover-over': group.hover || currentImageTab == $index}">{{group.name}}</div>
+            <div class="thumb-img" ng-class="{'hover-over-img': group.hover || currentImageTab == $index || isTouchDevice }" ng-style="group.thumbnailcss"></div>
+            <div class="hover-textbox hover-box-{{group.color}}" ng-class="{'hover-over': group.hover || currentImageTab == $index || isTouchDevice}">{{group.name}}</div>
           </div>
 
 
         </div>
-        <div class="img-borderline border-{{currentImg.tabs[currentImageTab].color}}" ng-if="currentImageTab != undefined">
+        <div class="img-borderline border-{{currentImg.tabs[currentImageTab].color}}" ng-class="{'hide-border': currentImageTab == undefined}">
           <div ng-repeat="img in currentImg.tabs[currentImageTab].imgs track by $index" ng-init="i = $index">
             <span ng-if="i % numOfColumns().length == 0">
                   <div class="preview-row" ng-class="{'preview-row-last': currentImg.tabs[currentImageTab].imgs.length-i < numOfColumns().length }" >
                     <span ng-repeat="img in numOfColumns() track by $index" class="preview-img" style="width: {{currentImg.tabs[currentImageTab].imgs[$index+i].percentageWidth}}%;" ng-click="open([$index+i])">
-                      <img ng-src="{{currentImg.tabs[currentImageTab].imgs[$index+i].thumb}} " width="100%" height="100%" style="width: 100%">
+                      <img class="image-img" ng-class="{'image-opacity-zero': inTransition }" ng-src="{{currentImg.tabs[currentImageTab].imgs[$index+i].thumb}} " width="100%" height="100%" style="width: 100%">
                     </span>
                   </div>
             </span>

@@ -3,6 +3,7 @@ angular.module('Matkakuvia', [
     'ngResource',
     'ui.router', 
     'ui.bootstrap',
+    'Home',
     'kohde',
     'kohde.services'
 ])
@@ -18,22 +19,16 @@ angular.module('Matkakuvia', [
 
 angular.module('Matkakuvia')
 .config(
-    [          '$stateProvider', '$urlRouterProvider',
-    function ($stateProvider,   $urlRouterProvider) {
+    [         '$urlRouterProvider',
+    function ($urlRouterProvider) {
 
         $urlRouterProvider
             .otherwise('/');
-
-        $stateProvider
-            .state("home", {
-                url: "/",
-                templateUrl: 'src/app/home/home.html',
-                controller: 'homeCtrl'
-            })
-        }
-    ]
-)
-
+    }
+])
+.service('touchService', function($window){
+    this.isTouchDevice = 'ontouchstart' in $window;
+})
 .directive('modalDialog', function($rootScope) {
     return {
         restrict: 'E',
@@ -66,26 +61,5 @@ angular.module('Matkakuvia')
         $scope.loadModal = !$scope.loadModal;
   };
 
-
-}])
-.controller('homeCtrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll){
-    
-    $scope.hover = {
-        hongkong: false,
-        taiwan: false,
-        vietnam: false,
-        kualalumpur: false,
-        thaimaa: false,
-        singapore: false,
-        bali: false
-    };
-
-    $scope.hoverText = function(place){
-        $scope.hover[place] = true;
-    };
-
-    $scope.unHoverText = function(place){
-        $scope.hover[place] = false;
-    };
 
 }]);
